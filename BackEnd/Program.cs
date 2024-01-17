@@ -8,7 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(opts =>
 {
-    opts.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:3333", "http://localhost:3334").AllowAnyHeader().AllowAnyMethod());
+    opts.AddDefaultPolicy(policy => policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());
 });
 var app = builder.Build();
 app.UseCors();
